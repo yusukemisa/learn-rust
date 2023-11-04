@@ -39,6 +39,8 @@ fn main() { // プログラムのエントリーポイント
         }
 
         let name = fields[0];
+        // Okはfields[1]の文字列がf32に正常に変換された場合にのみtrue
+        // 変換に成功した場合、lengthに値が格納される
         if let Ok(length) = fields[1].parse::<f32>() {
             println!("{}, {}cm",name,length)
         }
